@@ -1,0 +1,331 @@
+Я работаю на wordpress и я создала локальную базу данных это в общем проблема в том что я сделала код но когда делаю дубликат на то что я делаю и когда я на дубликат пишу другой адресс
+то у меня все исчезает из того нормального,снизу будут 2 кода,пкрвый нормальный второй который нет
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice Cream Sensation</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <style>
+table {
+    background-color: black; /* Setați culoarea de fundal la negru */
+    color: white; /* Setați culoarea textului la alb pentru contrast */
+    border-collapse: collapse; /* Asigurați-vă că celulele tabelului se suprapun corespunzător */
+    width: 300px; /* Setăm lățimea la 300 de pixeli */
+    height: 255px; /* Setăm înălțimea la 255 de pixeli */
+}
+
+/* Stilurile pentru capul de tabel (prima linie) */
+table th {
+    padding: 8px;
+    text-align: left;
+}
+
+/* Stilurile pentru celulele tabelului */
+table td {
+    padding: 8px;
+    text-align: left;
+    border-top: 1px solid white; /* Adăugați o linie albă sub fiecare rând */
+}
+        /* Paste your SCSS code here */
+        /* variables */
+        $anim-speed: 0.3s;
+
+        /* main styles */
+        .tiles {
+            width: 1040px;
+            font-size: 0;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        .tile {
+            display: inline-block;
+            margin: 10px;
+            text-align: left;
+            opacity: .99;
+            overflow: hidden;
+            position: relative;
+            border-radius: 3px;
+            box-shadow: 0 0 20px 0 rgba(0,0,0,.05);
+        }
+
+        .tile:before {
+            content: '';
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0) 0%,
+                rgba(0,0,0,0.7) 100%
+            );
+            width: 100%;
+            height: 50%;
+            opacity: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 2;
+            transition-property: top, opacity;
+            transition-duration: $anim-speed;
+        }
+
+        .tile img {
+            display: block;
+            max-width: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+
+        .details {
+            font-size: 16px;
+            padding: 20px;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 3;
+        }
+
+        .details span {
+            display: block;
+            opacity: 0;
+            position: relative;
+            top: 100px;
+            transition-property: top, opacity;
+            transition-duration: $anim-speed;
+            transition-delay: 0s;
+        }
+
+        .title {
+            line-height: 1;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .info {
+            line-height: 1.2;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+
+        .tile:focus,
+        .tile:hover {
+            .tile:before,
+            .details span {
+                opacity: 1;
+            }
+
+            .tile:before {
+                top: 50%;
+            }
+
+            .details span {
+                top: 0;
+            }
+
+            .title {
+                transition-delay: 0.15s;
+            }
+
+            .info {
+                transition-delay: 0.25s;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tiles">
+        <a class="tile" href="#">
+            <img src="http://localhost/myproject/wp-content/uploads/2023/09/52.png" alt="Ice Cream Sensation">
+            <div class="details">
+                <span class="title">Ice Cream Sensation</span>
+                <span class="info"><table>
+<tbody>
+<tr>
+<th>Categorie</th>
+<td>Cantitate</td>
+</tr>
+<tr>
+<th>Cod de bare</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Masa netă</th>
+<td>1 kg</td>
+</tr>
+<tr>
+<th>Grăsime</th>
+<td>10%</td>
+</tr>
+<tr>
+<th>Cantitatea în cutie</th>
+<td>-</td>
+</tr>
+</tbody>
+</table></span>
+            </div>
+        </a>
+    </div>
+</body>
+</html>
+
+
+
+
+Второй код 
+<!-- Link to your CSS file -->
+
+<style>
+table {<br />
+    background-color: black; /* Setați culoarea de fundal la negru */<br />
+    color: white; /* Setați culoarea textului la alb pentru contrast */<br />
+    border-collapse: collapse; /* Asigurați-vă că celulele tabelului se suprapun corespunzător */<br />
+    width: 300px; /* Setăm lățimea la 300 de pixeli */<br />
+    height: 255px; /* Setăm înălțimea la 255 de pixeli */<br />
+}</p>
+<p>/* Stilurile pentru capul de tabel (prima linie) */<br />
+table th {<br />
+    padding: 8px;<br />
+    text-align: left;<br />
+}</p>
+<p>/* Stilurile pentru celulele tabelului */<br />
+table td {<br />
+    padding: 8px;<br />
+    text-align: left;<br />
+    border-top: 1px solid white; /* Adăugați o linie albă sub fiecare rând */<br />
+}<br />
+        /* Paste your SCSS code here */<br />
+        /* variables */<br />
+        $anim-speed: 0.3s;</p>
+<p>        /* main styles */<br />
+        .tiles {<br />
+            width: 1040px;<br />
+            font-size: 0;<br />
+            text-align: center;<br />
+            position: absolute;<br />
+            top: 50%;<br />
+            left: 50%;<br />
+            transform: translate(-50%,-50%);<br />
+        }</p>
+<p>        .tile {<br />
+            display: inline-block;<br />
+            margin: 10px;<br />
+            text-align: left;<br />
+            opacity: .99;<br />
+            overflow: hidden;<br />
+            position: relative;<br />
+            border-radius: 3px;<br />
+            box-shadow: 0 0 20px 0 rgba(0,0,0,.05);<br />
+        }</p>
+<p>        .tile:before {<br />
+            content: '';<br />
+            background: linear-gradient(<br />
+                to bottom,<br />
+                rgba(0,0,0,0) 0%,<br />
+                rgba(0,0,0,0.7) 100%<br />
+            );<br />
+            width: 100%;<br />
+            height: 50%;<br />
+            opacity: 0;<br />
+            position: absolute;<br />
+            top: 100%;<br />
+            left: 0;<br />
+            z-index: 2;<br />
+            transition-property: top, opacity;<br />
+            transition-duration: $anim-speed;<br />
+        }</p>
+<p>        .tile img {<br />
+            display: block;<br />
+            max-width: 100%;<br />
+            backface-visibility: hidden;<br />
+            -webkit-backface-visibility: hidden;<br />
+        }</p>
+<p>        .details {<br />
+            font-size: 16px;<br />
+            padding: 20px;<br />
+            color: #fff;<br />
+            position: absolute;<br />
+            bottom: 0;<br />
+            left: 0;<br />
+            z-index: 3;<br />
+        }</p>
+<p>        .details span {<br />
+            display: block;<br />
+            opacity: 0;<br />
+            position: relative;<br />
+            top: 100px;<br />
+            transition-property: top, opacity;<br />
+            transition-duration: $anim-speed;<br />
+            transition-delay: 0s;<br />
+        }</p>
+<p>        .title {<br />
+            line-height: 1;<br />
+            font-weight: 600;<br />
+            font-size: 18px;<br />
+        }</p>
+<p>        .info {<br />
+            line-height: 1.2;<br />
+            margin-top: 5px;<br />
+            font-size: 12px;<br />
+        }</p>
+<p>        .tile:focus,<br />
+        .tile:hover {<br />
+            .tile:before,<br />
+            .details span {<br />
+                opacity: 1;<br />
+            }</p>
+<p>            .tile:before {<br />
+                top: 50%;<br />
+            }</p>
+<p>            .details span {<br />
+                top: 0;<br />
+            }</p>
+<p>            .title {<br />
+                transition-delay: 0.15s;<br />
+            }</p>
+<p>            .info {<br />
+                transition-delay: 0.25s;<br />
+            }<br />
+        }<br />
+    </style>
+
+&nbsp;
+<div class="tiles"><a class="tile" href="#">
+<img src="http://localhost/myproject/wp-content/uploads/2023/09/50.png" alt="Ice Cream Sensation" /></a>
+<div class="details"><span class="title">Ice Cream Sensation</span>
+<table>
+<tbody>
+<tr>
+<th>Categorie</th>
+<td>Cantitate</td>
+</tr>
+<tr>
+<th>Cod de bare</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Masa netă</th>
+<td>1 kg</td>
+</tr>
+<tr>
+<th>Grăsime</th>
+<td>10%</td>
+</tr>
+<tr>
+<th>Cantitatea în cutie</th>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+&nbsp;
+
+</div>
+&nbsp;
+
+</div>
+&nbsp;
